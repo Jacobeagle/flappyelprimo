@@ -58,3 +58,17 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: red;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
