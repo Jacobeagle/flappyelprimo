@@ -1,6 +1,7 @@
 const bird = document.getElementById('bird');
 const pipesContainer = document.getElementById('pipes');
 const scoreDisplay = document.getElementById('score');
+const jumpButton = document.getElementById('jumpButton');
 
 let birdBottom = 300;
 let gravity = 2;
@@ -57,5 +58,13 @@ function endGame() {
     alert('Koniec gry! Twój wynik: ' + score);
 }
 
+function updateScore() {
+    scoreDisplay.innerText = score;
+}
+
+// Obsługuje skakanie klawiaturą i przyciskiem
 document.addEventListener('keydown', jump);
+jumpButton.addEventListener('click', jump);
+
+// Uruchomienie gry
 const gameTimer = setInterval(startGame, 20);
